@@ -6,7 +6,7 @@ const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
 function DeleteConfirm({ isOpen, onClose, onDeleteSuccess, item }) {
   const [loading, setLoading] = useState(false);
 
-  // If modal is closed or item is missing, return nothing
+  
   if (!isOpen || !item || !item._id) return null;
 
   const handleDelete = async () => {
@@ -22,10 +22,10 @@ function DeleteConfirm({ isOpen, onClose, onDeleteSuccess, item }) {
 
       console.log("Item deleted successfully:", item._id);
 
-      // Immediately update the UI by calling the callback
+     
       onDeleteSuccess(item._id);
 
-      // Close the modal
+     
       onClose();
     } catch (error) {
       console.error("Error deleting item:", error);

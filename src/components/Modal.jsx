@@ -62,7 +62,7 @@ function Modal({ isOpen, onClose, onSubmit, editingItem }) {
         setFormData({ name: "", rating: 1, description: "", createdDate: new Date().toLocaleDateString('en-CA') });
         setErrors({});
         onClose(); 
-        window.location.reload(); // Ensure page refresh after operation
+        window.location.reload(); 
       } catch (error) {
         console.error("Error saving item:", error);
       }

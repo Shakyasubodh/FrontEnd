@@ -11,7 +11,7 @@ function App() {
   const [selectedItem, setSelectedItem] = useState(null);
   const [editingItem, setEditingItem] = useState(null);
 
-  // Load items from localStorage
+  
   useEffect(() => {
     fetchItems();
   }, []);
@@ -23,7 +23,7 @@ function App() {
     }
   };
 
-  // Save items to localStorage
+  
   useEffect(() => {
     localStorage.setItem('items', JSON.stringify(items));
   }, [items]);
