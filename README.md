@@ -11,7 +11,7 @@ This is the Frontend for a MERN stack CRUD application. It is built using React.
 
 ## **Getting Started**
 
-### ** Clone the Repository**
+### Clone the Repository
 ```sh
 git clone https://github.com/Shakyasubodh/FrontEnd
 
