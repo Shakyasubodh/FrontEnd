@@ -43,8 +43,8 @@ function Modal({ isOpen, onClose, onSubmit, editingItem }) {
     if (validateForm()) {
       try {
         const url = editingItem
-          ? `http://localhost:5000/api/items/${editingItem._id}`
-          : "http://localhost:5000/api/items";
+          ? `https://taskbackend-nine.vercel.app/api/items/${editingItem._id}`
+          : "https://taskbackend-nine.vercel.app/api/items";
   
         const method = editingItem ? "PUT" : "POST";
 

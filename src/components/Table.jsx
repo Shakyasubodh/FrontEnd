@@ -7,7 +7,7 @@ function Table({ onEdit, onDelete }) {
   const itemsPerPage = 5;
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/items")
+    fetch("https://taskbackend-nine.vercel.app/api/items")
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((error) => console.error("Error fetching items:", error));
