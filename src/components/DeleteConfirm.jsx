@@ -13,7 +13,7 @@ function DeleteConfirm({ isOpen, onClose, onDeleteSuccess, item }) {
     setLoading(true);
 
     try {
-      const response = await fetch(`${API_URL}/api/items/${item._id}`, {
+      const response = await fetch(`${API_URL}api/items/${item._id}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" }
       });
