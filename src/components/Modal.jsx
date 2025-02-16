@@ -17,14 +17,14 @@ function Modal({ isOpen, onClose, onSubmit, editingItem }) {
         name: editingItem.name || '',
         rating: editingItem.rating || 1,
         description: editingItem.description || '',
-        createdDate: editingItem.createdDate || new Date().toLocaleDateString('en-CA')
+        createdDate: editingItem.createdDate ? editingItem.createdDate.split('T')[0] : new Date().toISOString().split('T')[0] 
       });
     } else {
       setFormData({
         name: '',
         rating: 1,
         description: '',
-        createdDate: new Date().toLocaleDateString('en-CA')
+        createdDate: new Date().toISOString().split('T')[0] 
       });
     }
   }, [editingItem]);
@@ -116,7 +116,7 @@ function Modal({ isOpen, onClose, onSubmit, editingItem }) {
               value={formData.createdDate}
               onChange={(e) => setFormData({ ...formData, createdDate: e.target.value })}
               disabled={!!editingItem} 
-              className={`w-full border rounded p-2 ${errors.createdDate ? 'border-red-500' : ''}`}
+              className={`w-full border rounded p-2 bg-gray-100 cursor-not-allowed ${errors.createdDate ? 'border-red-500' : ''}`}
             />
             {errors.createdDate && <p className="text-red-500 text-sm mt-1">{errors.createdDate}</p>}
           </div>

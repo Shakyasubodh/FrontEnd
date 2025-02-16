@@ -31,7 +31,7 @@ function Table({ onEdit, onDelete }) {
             <th className="px-6 py-3 text-left text-sm font-medium text-gray-500">S.No</th>
             <th className="px-6 py-3 text-left text-sm font-medium text-gray-500">Name</th>
             <th className="px-6 py-3 text-left text-sm font-medium text-gray-500">Created Date</th>
-            <th className="px-6 py-3 text-left text-sm font-medium text-gray-500">Description</th>
+            <th className="px-6 py-3 text-left text-sm font-medium text-gray-500 w-80">Description</th>
             <th className="px-6 py-3 text-left text-sm font-medium text-gray-500">Rating</th>
             <th className="px-6 py-3 text-left text-sm font-medium text-gray-500">Actions</th>
           </tr>
